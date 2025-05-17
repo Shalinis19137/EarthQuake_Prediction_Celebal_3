@@ -1,61 +1,154 @@
 # EarthQuake_Prediction_Project
-Earthquake Prediction System (1995-2023) 🌍🔍
-This project is part of my internship at Pregrade, where I explored the application of machine learning in predicting earthquake magnitudes based on historical data.
+This project uses machine learning techniques to analyze and predict earthquake-related data. It includes data preprocessing, visualization, and model training using multiple regression algorithms to understand the patterns and potentially forecast earthquake metrics.
 
-🚀 Project Overview
-In this project, I built a Machine Learning model to predict earthquake magnitudes using historical earthquake data from 1995 to 2023.
-The goal is to provide a basic predictive system that can help understand seismic patterns and trends.
+📘 Explanation of Terms & Workflow
+1. Libraries Used
+pandas, numpy: For data manipulation and numerical operations.
 
-📊 Dataset
-Source: Kaggle
+matplotlib, seaborn: For visualization.
 
-I have also provided the dataset used for this project in this repository: earthquake_1995-2023.csv
+sklearn: For preprocessing, model training, and evaluation.
 
-⚙️ Technologies Used
-Python
+2. Data Loading
+The dataset (earthquake_1995-2023.csv) includes earthquake event records from 1995 to 2023.
 
-Pandas
+3. Data Inspection
+.shape, .head(), .info(), .isnull().sum(): Used to understand the structure, preview records, and check missing values.
 
-Scikit-learn
+4. Data Preprocessing
+Missing Values Handling: Dropping missing rows for simplicity.
 
-Matplotlib & Seaborn (for data visualization)
+Label Encoding: Converting categorical features into numeric values using LabelEncoder.
 
-Jupyter Notebook
+Standard Scaling: Normalizing the data using StandardScaler to improve model performance.
 
-📌 Key Steps
-Data Cleaning & Preprocessing
+5. Visualization Techniques (8 types)
+Histogram: Distribution of a numeric column.
 
-Exploratory Data Analysis (EDA)
+Boxplot: Detect outliers and distribution.
 
-Model Selection & Training
+Scatter Plot: Relation between two variables.
 
-Performance Evaluation
+Heatmap: Correlation between features.
 
-Visualization of results
+Bar Plot: Frequency of categorical or integer features.
 
-💡 Challenges Faced
-During the development, I faced various challenges related to:
+Line Plot: Trends over time or order.
 
-Data preprocessing and handling missing values
+Violin Plot: Distribution and density.
 
-Feature selection
+Pair Plot: Relationships between multiple numeric variables.
 
-Model tuning and overfitting
+6. Model Training
+Features (X) and Target (y) are split from the dataset.
 
-I overcame these issues by leveraging resources like YouTube tutorials, ChatGPT, and online ML communities.
+Train-Test Split: 80-20 division using train_test_split.
 
-📝 Future Improvements
-Adding deep learning models for better accuracy
+7. Algorithms Used
+LinearRegression
 
-Incorporating more seismic parameters and real-time data streams
+DecisionTreeRegressor
 
-Building a user-friendly interface
+RandomForestRegressor
 
-📁 Dataset
-You can find the dataset I used:
-earthquake_1995-2023.csv
+SVR (Support Vector Regression)
 
-🔗 References
-Kaggle Dataset Source
+8. Evaluation Metrics
+mean_squared_error (MSE): Measures average squared difference.
 
-Scikit-learn Documentation
+r2_score: Goodness of fit.
+
+classification_report, accuracy_score, confusion_matrix: Mainly used for classification, but might be included for exploratory purposes.
+
+📊 Plot Types Explained (8 Types)
+Histogram
+
+Shows the frequency distribution of a single numeric feature.
+
+Helps identify the spread, skewness, and presence of outliers in the data.
+
+Boxplot
+
+Displays the distribution, median, and outliers of a numeric column.
+
+Useful for spotting extreme values and understanding data spread (IQR).
+
+Scatter Plot
+
+Shows the relationship between two numeric variables.
+
+Helps detect correlations or patterns like linear or nonlinear relationships.
+
+Heatmap (Correlation Matrix)
+
+Visual representation of the correlation coefficients between numeric variables.
+
+Stronger correlations are easily spotted using color intensity.
+
+Bar Plot
+
+Represents the count of each category in an integer or categorical column.
+
+Useful for comparing the frequency of different classes or events.
+
+Line Plot
+
+Connects data points with a line, usually used to observe trends over time.
+
+Helpful for time series or sequential data to identify rising/falling trends.
+
+Violin Plot
+
+Combines a boxplot with a KDE (Kernel Density Estimate).
+
+Shows both distribution and probability density of the data.
+
+Pair Plot
+
+Generates scatter plots for all pairwise combinations of variables and histograms on the diagonal.
+
+Excellent for multivariate analysis and identifying correlations.
+
+🤖 Machine Learning Models Explained
+Linear Regression
+
+Predicts a numeric target by fitting a straight line through the data.
+
+Assumes a linear relationship between input features and output.
+
+Decision Tree Regressor
+
+Predicts values by learning decision rules from features.
+
+Breaks the data into branches like a flowchart based on feature conditions.
+
+Random Forest Regressor
+
+An ensemble of multiple decision trees.
+
+Improves accuracy and reduces overfitting by averaging the results of many trees.
+
+Support Vector Regressor (SVR)
+
+Tries to fit the best line within a margin of tolerance.
+
+Good for complex relationships and outlier-resilient predictions.
+
+📏 Evaluation Metrics Used
+Mean Squared Error (MSE)
+
+Measures the average squared difference between actual and predicted values.
+
+Lower MSE indicates better model performance.
+
+R² Score (Coefficient of Determination)
+
+Represents how much variance in the target variable is explained by the model.
+
+Ranges from 0 to 1; higher values mean better performance.
+
+Accuracy Score / Classification Report / Confusion Matrix
+
+Though typically used for classification, they might be included if the target variable is binned into classes.
+
+They help evaluate model correctness, precision, recall, and F1-score.
