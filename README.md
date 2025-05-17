@@ -60,6 +60,7 @@ r2_score: Goodness of fit.
 
 classification_report, accuracy_score, confusion_matrix: Mainly used for classification, but might be included for exploratory purposes.
 
+
 📊 Plot Types Explained (8 Types)
 Histogram
 
@@ -109,6 +110,7 @@ Generates scatter plots for all pairwise combinations of variables and histogram
 
 Excellent for multivariate analysis and identifying correlations.
 
+
 🤖 Machine Learning Models Explained
 Linear Regression
 
@@ -133,6 +135,7 @@ Support Vector Regressor (SVR)
 Tries to fit the best line within a margin of tolerance.
 
 Good for complex relationships and outlier-resilient predictions.
+
 
 📏 Evaluation Metrics Used
 Mean Squared Error (MSE)
