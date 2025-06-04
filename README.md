@@ -1,204 +1,75 @@
-# EarthQuake_Prediction_Project
-This project uses machine learning techniques to analyze and predict earthquake-related data. It includes data preprocessing, visualization, and model training using multiple regression algorithms to understand the patterns and potentially forecast earthquake metrics.
+# EarthQuake_Prediction_Celebal
 
-📘 Explanation of Terms & Workflow
-1. Libraries Used
-pandas, numpy: For data manipulation and numerical operations.
+🌍 EarthQuake Prediction Project
+This project utilizes machine learning techniques to analyze and predict earthquake-related data. It involves data preprocessing, visualization, and model training using multiple regression algorithms to uncover patterns and potentially forecast earthquake metrics.
 
-matplotlib, seaborn: For visualization.
+📘 Project Workflow & Key Concepts
+1. 🔧 Libraries Used
+pandas, numpy – For data manipulation and numerical operations.
 
-sklearn: For preprocessing, model training, and evaluation.
+matplotlib, seaborn – For visualizing data through charts and plots.
 
+sklearn – For preprocessing, model building, and evaluation.
 
+2. 📂 Data Loading
+Dataset: earthquake_1995-2023.csv
 
-2. Data Loading
-The dataset (earthquake_1995-2023.csv) includes earthquake event records from 1995 to 2023.
+Description: Contains earthquake event records from 1995 to 2023.
 
+3. 🧐 Data Inspection
+Functions used:
 
+.shape, .head() – To view dataset structure and preview records.
 
-4. Data Inspection
-.shape, .head(), .info(), .isnull().sum(): Used to understand the structure, preview records, and check missing values.
+.info(), .isnull().sum() – To check data types and missing values.
 
+4. 🧹 Data Preprocessing
+Handling Missing Values: Dropped rows with nulls for simplicity.
 
+Label Encoding: Converted categorical features to numeric using LabelEncoder.
 
-6. Data Preprocessing
-Missing Values Handling: Dropping missing rows for simplicity.
+Standard Scaling: Applied StandardScaler to normalize features and enhance model performance.
 
-Label Encoding: Converting categorical features into numeric values using LabelEncoder.
+5. 📊 Data Visualization Techniques (8 Types)
+Plot Type	Description
+Histogram	Shows distribution of a numeric variable.
+Boxplot	Detects outliers, displays quartiles and spread.
+Scatter Plot	Examines relationships between two numeric features.
+Heatmap	Displays feature correlation matrix with color intensities.
+Bar Plot	Shows frequency/count of categorical or discrete numeric features.
+Line Plot	Reveals trends over time (ideal for time-series analysis).
+Violin Plot	Combines boxplot and KDE to show distribution and density.
+Pair Plot	Shows scatterplots of all feature pairs and histograms on the diagonal.
 
-Standard Scaling: Normalizing the data using StandardScaler to improve model performance.
+6. 🧠 Model Training
+Feature Selection: Split dataset into features (X) and target (y).
 
+Train-Test Split: Applied an 80-20 split using train_test_split for evaluation.
 
+7. 🤖 Algorithms Used
+Linear Regression – Assumes a linear relationship between features and target.
 
-5. Visualization Techniques (8 types)
-Histogram: Distribution of a numeric column.
+Decision Tree Regressor – Splits data via feature-based decision rules.
 
-Boxplot: Detect outliers and distribution.
+Random Forest Regressor – Ensemble of decision trees to reduce overfitting and improve accuracy.
 
-Scatter Plot: Relation between two variables.
+Support Vector Regressor (SVR) – Finds the best-fit line with a defined margin; robust against outliers.
 
-Heatmap: Correlation between features.
+8. 📏 Evaluation Metrics
+Metric	Purpose
+Mean Squared Error (MSE)	Measures average squared differences between actual and predicted values. Lower is better.
+R² Score	Indicates the proportion of variance explained by the model. Closer to 1 = better.
+Accuracy / Classification Report / Confusion Matrix	Included optionally if target values are categorized; evaluates model precision, recall, F1-score.
 
 
-Bar Plot: Frequency of categorical or integer features.
 
 
-Line Plot: Trends over time or order.
 
 
-Violin Plot: Distribution and density.
 
-Pair Plot: Relationships between multiple numeric variables.
 
 
 
-6. Model Training
-Features (X) and Target (y) are split from the dataset.
 
-Train-Test Split: 80-20 division using train_test_split.
 
 
-
-7. Algorithms Used
-LinearRegression
-
-DecisionTreeRegressor
-
-RandomForestRegressor
-
-SVR (Support Vector Regression)
-
-
-
-8. Evaluation Metrics
-mean_squared_error (MSE): Measures average squared difference.
-
-r2_score: Goodness of fit.
-
-classification_report, accuracy_score, confusion_matrix: Mainly used for classification, but might be included for exploratory purposes.
-
-
-
-
-
-📊 Plot Types Explained (8 Types)
-
-
-Histogram
-
-Shows the frequency distribution of a single numeric feature.
-
-Helps identify the spread, skewness, and presence of outliers in the data.
-
-
-
-Boxplot
-
-Displays the distribution, median, and outliers of a numeric column.
-
-Useful for spotting extreme values and understanding data spread (IQR).
-
-
-
-Scatter Plot
-
-Shows the relationship between two numeric variables.
-
-Helps detect correlations or patterns like linear or nonlinear relationships.
-
-
-
-Heatmap (Correlation Matrix)
-
-Visual representation of the correlation coefficients between numeric variables.
-
-Stronger correlations are easily spotted using color intensity.
-
-
-
-Bar Plot
-
-Represents the count of each category in an integer or categorical column.
-
-Useful for comparing the frequency of different classes or events.
-
-
-
-Line Plot
-
-Connects data points with a line, usually used to observe trends over time.
-
-Helpful for time series or sequential data to identify rising/falling trends.
-
-
-
-Violin Plot
-
-Combines a boxplot with a KDE (Kernel Density Estimate).
-
-Shows both distribution and probability density of the data.
-
-
-
-Pair Plot
-
-Generates scatter plots for all pairwise combinations of variables and histograms on the diagonal.
-
-Excellent for multivariate analysis and identifying correlations.
-
-
-🤖 Machine Learning Models Explained
-
-
-Linear Regression
-
-
-Predicts a numeric target by fitting a straight line through the data.
-
-Assumes a linear relationship between input features and output.
-
-
-
-Decision Tree Regressor
-
-Predicts values by learning decision rules from features.
-
-Breaks the data into branches like a flowchart based on feature conditions.
-
-
-
-Random Forest Regressor
-
-An ensemble of multiple decision trees.
-
-Improves accuracy and reduces overfitting by averaging the results of many trees.
-
-
-
-Support Vector Regressor (SVR)
-
-Tries to fit the best line within a margin of tolerance.
-
-Good for complex relationships and outlier-resilient predictions.
-
-
-
-
-📏 Evaluation Metrics Used
-Mean Squared Error (MSE)
-
-Measures the average squared difference between actual and predicted values.
-
-Lower MSE indicates better model performance.
-
-R² Score (Coefficient of Determination)
-
-Represents how much variance in the target variable is explained by the model.
-
-Ranges from 0 to 1; higher values mean better performance.
-
-Accuracy Score / Classification Report / Confusion Matrix
-
-Though typically used for classification, they might be included if the target variable is binned into classes.
-
-They help evaluate model correctness, precision, recall, and F1-score.
